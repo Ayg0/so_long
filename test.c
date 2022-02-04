@@ -45,9 +45,9 @@ int	ft_strcmp(char *q1, char *q2)
 char	*check_for_me(int i, int j, t_vars *vars, int flag)
 {
 	if(vars->k[i][j] == '1')
-		return ("block.xpm");
+		return ("b.xpm");
 	else if(vars->k[i][j] == '0')
-		return ("block.xpm");
+		return ("b.xpm");
 	else if(vars->k[i][j] == 'P' && flag == 1)
 	{
 		vars->bam->i = j;
@@ -55,7 +55,7 @@ char	*check_for_me(int i, int j, t_vars *vars, int flag)
 		return ("p.xpm");
 	}
 	else if(vars->k[i][j] == 'E')
-		return ("block.xpm");
+		return ("b.xpm");
 	else if(vars->k[i][j] == 'C')
 		return ("coin.xpm");
 	else

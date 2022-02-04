@@ -6,7 +6,7 @@
 /*   By: ted-dafi <ted-dafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 20:29:45 by ted-dafi          #+#    #+#             */
-/*   Updated: 2022/02/02 20:13:38 by ted-dafi         ###   ########.fr       */
+/*   Updated: 2022/02/04 12:08:50 by ted-dafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	final(char **line, char **buff)
 	i = ft_newlchr(*buff);
 	if (i >= 0)
 	{
-		*line = ft_substr(*buff, 0, i + 1);
+		*line = ft_substr(*buff, 0, i);
 		temp = *buff;
 		*buff = ft_substr(*buff, i + 1, ft_strlen(*buff));
 		my_free(&temp, NULL, 0);
