@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ted-dafi <ted-dafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/28 20:31:20 by ted-dafi          #+#    #+#             */
-/*   Updated: 2022/02/02 20:13:28 by ted-dafi         ###   ########.fr       */
+/*   Created: 2022/02/05 14:58:37 by ted-dafi          #+#    #+#             */
+/*   Updated: 2022/02/05 14:58:39 by ted-dafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 char	*ft_strjoin(char **s1, char *s2);
 int		ft_newlchr(const char *s);
-size_t	ft_strlen(const char *s);
+int		ft_strlen(const char *s);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
 char	*get_next_line(int fd, int BUFFER_SIZE);

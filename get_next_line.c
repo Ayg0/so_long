@@ -6,19 +6,19 @@
 /*   By: ted-dafi <ted-dafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 20:29:45 by ted-dafi          #+#    #+#             */
-/*   Updated: 2022/02/04 12:08:50 by ted-dafi         ###   ########.fr       */
+/*   Updated: 2022/02/06 10:45:15 by ted-dafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 #include <fcntl.h>
 
-size_t	ft_strlen(const char *s)
+int	ft_strlen(const char *s)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	if(!s)
+	if (!s)
 		return (0);
 	while (s[i])
 		i++;
@@ -53,7 +53,7 @@ void	final(char **line, char **buff)
 	i = ft_newlchr(*buff);
 	if (i >= 0)
 	{
-		*line = ft_substr(*buff, 0, i);
+		*line = ft_substr(*buff, 0, i + 1);
 		temp = *buff;
 		*buff = ft_substr(*buff, i + 1, ft_strlen(*buff));
 		my_free(&temp, NULL, 0);
