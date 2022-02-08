@@ -6,7 +6,7 @@
 /*   By: ted-dafi <ted-dafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 14:58:10 by ted-dafi          #+#    #+#             */
-/*   Updated: 2022/02/08 09:18:34 by ted-dafi         ###   ########.fr       */
+/*   Updated: 2022/02/08 17:45:49 by ted-dafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,19 +59,12 @@ typedef struct s_numbers
 
 typedef struct s_sprites
 {
-	t_xml_ig	p1;
-	t_xml_ig	p2;
+	t_xml_ig	p[3];
 	t_xml_ig	e;
-	t_xml_ig	c;
-	t_xml_ig	c1;
-	t_xml_ig	c2;
-	t_xml_ig	c3;
-	t_xml_ig	c4;
-	t_xml_ig	c5;
 	t_xml_ig	win;
+	t_xml_ig	c[6];
 	t_xml_ig	b;
-	t_xml_ig	e1;
-	t_xml_ig	e2;
+	t_xml_ig	ex[3];
 	t_xml_ig	m;
 }	t_sp;
 

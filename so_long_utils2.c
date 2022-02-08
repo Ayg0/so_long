@@ -6,7 +6,7 @@
 /*   By: ted-dafi <ted-dafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 19:07:15 by ted-dafi          #+#    #+#             */
-/*   Updated: 2022/02/07 19:04:28 by ted-dafi         ###   ########.fr       */
+/*   Updated: 2022/02/08 17:46:31 by ted-dafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,14 +100,14 @@ void	*the_one(t_data *gl, char c, int i, int j)
 		gl->player.x = i;
 		gl->player.y = j;
 		if (gl->player.r_l == 0)
-			return (gl->s.p2.ig);
-		return (gl->s.p1.ig);
+			return (gl->s.p[1].ig);
+		return (gl->s.p[2].ig);
 	}
 	else if (c == 'E')
 	{
 		if (gl->player.coins == 0)
-			return (gl->s.e1.ig);
-		return (gl->s.e2.ig);
+			return (gl->s.ex[1].ig);
+		return (gl->s.ex[2].ig);
 	}
 	else if (c == 'N')
 		return (gl->s.e.ig);
@@ -116,7 +116,7 @@ void	*the_one(t_data *gl, char c, int i, int j)
 	else
 	{
 		gl->player.coins++;
-		return (gl->s.c.ig);
+		return (gl->s.c[0].ig);
 	}
 }
 

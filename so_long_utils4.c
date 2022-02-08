@@ -6,7 +6,7 @@
 /*   By: ted-dafi <ted-dafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 19:03:49 by ted-dafi          #+#    #+#             */
-/*   Updated: 2022/02/08 08:54:04 by ted-dafi         ###   ########.fr       */
+/*   Updated: 2022/02/08 17:41:50 by ted-dafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,15 @@ void	coin_changes(t_data	*gl)
 {
 	gl->nu.frames++;
 	if (gl->nu.frames < 5)
-		gl->s.c = gl->s.c1;
+		gl->s.c[0] = gl->s.c[1];
 	else if (gl->nu.frames < 10)
-		gl->s.c = gl->s.c2;
+		gl->s.c[0] = gl->s.c[2];
 	else if (gl->nu.frames < 15)
-		gl->s.c = gl->s.c3;
+		gl->s.c[0] = gl->s.c[3];
 	else if (gl->nu.frames < 20)
-		gl->s.c = gl->s.c4;
+		gl->s.c[0] = gl->s.c[4];
 	else if (gl->nu.frames < 25)
-		gl->s.c = gl->s.c5;
+		gl->s.c[0] = gl->s.c[5];
 	else
 		gl->nu.frames = 0;
 }
