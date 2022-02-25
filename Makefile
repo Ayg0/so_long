@@ -3,7 +3,7 @@ CC = cc
 NAME = so_long
 
 
-CFLAGS = -Wall -Werror -Wextra -Imlx
+CFLAGS = -Wall -Werror -Wextra -Imlx -g
 LFLAGS = -lmlx -framework OpenGl -framework Appkit
 
 SRCS = enemy_movements.c so_long.c so_long_utils1.c so_long_utils2.c so_long_utils3.c\

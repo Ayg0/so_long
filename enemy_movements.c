@@ -6,7 +6,7 @@
 /*   By: ted-dafi <ted-dafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 08:53:03 by ted-dafi          #+#    #+#             */
-/*   Updated: 2022/02/08 08:54:49 by ted-dafi         ###   ########.fr       */
+/*   Updated: 2022/02/10 17:11:54 by ted-dafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	check_places_of_bads(t_data *gl)
 	k = 0;
 	if (gl->nu.en_num == 0)
 		return ;
-	gl->bad = (t_e_info *)malloc(sizeof(t_e_info) * gl->nu.en_num);
+	gl->bad = (t_e_info *)ft_calloc(gl->nu.en_num, sizeof(t_e_info));
 	while (i < gl->nu.h)
 	{
 		j = 0;
@@ -66,9 +66,9 @@ void	enemy_logic(t_data *gl)
 	if (gl->nu.en_num == 0)
 		return ;
 	gl->nu.ene_less++;
-	if (gl->nu.ene_less < 20)
+	if (gl->nu.ene_less < 40)
 		return ;
-	else if (gl->nu.ene_less == 20)
+	else if (gl->nu.ene_less == 40)
 		gl->nu.ene_less = 0;
 	while (i < gl->nu.en_num)
 	{

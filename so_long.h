@@ -6,7 +6,7 @@
 /*   By: ted-dafi <ted-dafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 14:58:10 by ted-dafi          #+#    #+#             */
-/*   Updated: 2022/02/08 17:45:49 by ted-dafi         ###   ########.fr       */
+/*   Updated: 2022/02/14 17:46:54 by ted-dafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ typedef struct s_sprites
 	t_xml_ig	win;
 	t_xml_ig	c[6];
 	t_xml_ig	b;
-	t_xml_ig	ex[3];
+	t_xml_ig	ex;
 	t_xml_ig	m;
 }	t_sp;
 
@@ -83,6 +83,7 @@ typedef struct all_in_one
 void	render_it(t_data *game_info, int flag);
 int		add_life(int keycode, t_data *game_info);
 void	init_data(t_data *game_info);
+char	last_char(char *line);
 void	init_elements(t_data *game_info);
 int		close_window(void);
 int		load_map(char *name, t_data *game_info);
@@ -94,7 +95,6 @@ char	*ft_strstr(char *haystack, char *needle, size_t len);
 char	*ft_itoa(int n);
 int		ft_strchr(char *s, int c, int f1, int f2);
 void	arr_swap(char *s);
-void	ft_sleep(unsigned int time);
 void	coin_changes(t_data	*gl);
 void	render_mods(t_data	*gl);
 void	check_places_of_bads(t_data *gl);

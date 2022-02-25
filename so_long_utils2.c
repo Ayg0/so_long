@@ -6,7 +6,7 @@
 /*   By: ted-dafi <ted-dafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 19:07:15 by ted-dafi          #+#    #+#             */
-/*   Updated: 2022/02/08 17:46:31 by ted-dafi         ###   ########.fr       */
+/*   Updated: 2022/02/10 17:10:40 by ted-dafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	load_map(char *name, t_data *gl)
 	int		fd;
 	char	*line;
 	int		k;
+	int		c;
 
 	fd = open(name, 2);
 	if (fd < 0)
@@ -29,12 +30,15 @@ int	load_map(char *name, t_data *gl)
 		gl->nu.h++;
 		free(line);
 		line = get_next_line(fd, 1);
-		k = ft_strlen(line) != gl->nu.w;
-		if (k && ft_strlen(line) != 0 && line[ft_strlen(line) - 1] == '\n')
+		if (!line)
+			break ;
+		c = last_char(line);
+		k = (ft_strlen(line) + c) != gl->nu.w;
+		if (k)
 			return (0);
 	}
 	close(fd);
-	return (1);
+	return (c);
 }
 
 int	final_check(t_data *gl)
@@ -100,15 +104,11 @@ void	*the_one(t_data *gl, char c, int i, int j)
 		gl->player.x = i;
 		gl->player.y = j;
 		if (gl->player.r_l == 0)
-			return (gl->s.p[1].ig);
-		return (gl->s.p[2].ig);
+			return (gl->s.p[2].ig);
+		return (gl->s.p[1].ig);
 	}
 	else if (c == 'E')
-	{
-		if (gl->player.coins == 0)
-			return (gl->s.ex[1].ig);
-		return (gl->s.ex[2].ig);
-	}
+		return (gl->s.ex.ig);
 	else if (c == 'N')
 		return (gl->s.e.ig);
 	else if (c == '0')

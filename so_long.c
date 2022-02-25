@@ -6,7 +6,7 @@
 /*   By: ted-dafi <ted-dafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 18:06:14 by ted-dafi          #+#    #+#             */
-/*   Updated: 2022/02/08 17:39:56 by ted-dafi         ###   ########.fr       */
+/*   Updated: 2022/02/10 14:49:42 by ted-dafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,6 @@ void	arr_swap(char *s)
 
 int	render_next_frame(t_data *gl)
 {
-	int	i;
-
-	i = 0;
-	ft_sleep(2000);
-	coin_changes(gl);
-	render_mods(gl);
-	ft_sleep(2000);
 	coin_changes(gl);
 	render_mods(gl);
 	enemy_logic(gl);
